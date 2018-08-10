@@ -1,7 +1,7 @@
 #=====================================================================================================================
 # Set-up
 #=====================================================================================================================
-rm(list=ls())
+# rm(list=ls())
 # install.packages("foreign")           # Zugriff auf STATA (.dta) files mit read.dta Befehl
 library(foreign)                          
 # install.packages("ggplot2")           # vervielf?ltigt M?glichkeiten bei der Arbeit mit Plots und verbessert so Verst?ndlichkeit
@@ -21,19 +21,6 @@ library(ggbiplot)
 # install.packages("corrplot")          # Korrelation der Vaqriablen untereinander grafisch ab zu bilden
 library(corrplot)
 
-
-
-# # install.packages("mclust")
-# # install.packages("outliers")
-# # install.packages("mclust")
-# # install.packages("calibrate")
-# # install.packages("stats")
-# 
-# library(cluster)
-# library(mclust)
-# library(outliers)
-
-
 setwd("~/Google Drive/UNI/aktuelles Semester/Datenanalyse")
 
 # suppress warnings, nicht geladene Variablen haben keinen Einfluss auf Analyse
@@ -43,7 +30,7 @@ data = read.dta("qog_std_cs_15may13.dta")
 options(warn=0) 
 
 #=====================================================================================================================
-# Kategorisieren der Auspr?gungen der einzelnen Variablen/ Hinzuf?gen dieser zu DF
+# Kategorisieren der Ausprägungen der einzelnen Variablen/ Hinzufügen dieser zu DF
 #=====================================================================================================================
 
 corr_df <- data.frame("country"    = data$cname,
